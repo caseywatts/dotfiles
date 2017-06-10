@@ -55,6 +55,17 @@ alias openwork='atom $(git ls-files -mo)' # open all modified or untracked files
 alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)' # oh yeah saltnpepa
 alias bs='browser-sync start . -s --files "*.html, *.css"' # way better than livereload!
 
+# see: caseywatts.com/darken
+# accepts 2 arguments
+#   - filename without extension (no .pdf)
+#   - threshold value (default is 80 if none given)
+# examples:
+#  - darken SheetMusic_Papi 75
+#  - darken SheetMusic_Papi
+function darken() {
+  DENSITY=${2:-80} # either the 2nd argument, or the default will be 80
+  convert -density 300x300 $1.pdf -threshold $DENSITY% $1_$DENSITY.pdf
+}
 
 
 
