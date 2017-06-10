@@ -1,12 +1,5 @@
 [alias]
-  st = status
-  ci = commit
-  br = branch
   co = checkout
-  df = diff --color
-  lg = log -p
-  lp = log --oneline --graph --color
-  df = diff --word-diff=color
   nudge = push --force-with-lease
 [color]
   status = true
