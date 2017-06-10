@@ -1,10 +1,17 @@
 ### ZSH ###
+# uses the plugin zsh-syntax-highlighting
+# see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git bundler vi-mode)
+plugins=(git bundler vi-mode zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+# .zshrc
 
+# # use 'pure' prompt #
+# autoload -U promptinit; promptinit
+# prompt pure
+#
 
 
 ### THE MOST IMPORTANT PART ###
