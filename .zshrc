@@ -1,34 +1,18 @@
+### ZSH ###
+
 export ZSH=$HOME/.oh-my-zsh
-# export ZSH_CUSTOM=$HOME/.oh-my-zsh-custom
-# export ZSH_THEME="continuity"
 ZSH_THEME="robbyrussell"
 plugins=(git bundler vi-mode)
 source $ZSH/oh-my-zsh.sh
 
-#disable ctrl-s/suspension
-# stty stop undef
-# setopt NO_FLOW_CONTROL
-# setopt magicequalsubst
-# setopt interactivecomments
-# bindkey '^R' history-incremental-search-backward
-# autoload -U zrecompile
-
-#ignore obnoxious stuff
-# alias git='nocorrect git'
-# alias rake='noglob rake'
-# Add the following to your ~/.bashrc or ~/.zshrc
 
 
-# Allow for local environment configuration in ~/.zsh/*.zsh
-# if [ -d ~/.zsh ]; then
-#   for config_file (~/.zsh/*.zsh); do
-#     source $config_file
-#   done
-# fi
+### THE MOST IMPORTANT PART ###
 
-# RVM is a silly thing. This fixes tmux not loading gemset
-# http://stackoverflow.com/a/6097090/3010499
-# cd .
+# Search History (autocomplete style~)
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
 
 
 ### JUST PATHY THINGS ###
@@ -65,13 +49,13 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # continuity ones?
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH=$PATH:$HOME/bin # Make personal scripts available
-PATH=$PATH:$HOME/.bin # Make dotfiles scripts available
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/bin # Make personal scripts available
+# PATH=$PATH:$HOME/.bin # Make dotfiles scripts available
 
 
 
-### ALIASES ###
+### MY ALIASES ###
 
 # aliases
 function dl() {youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
@@ -79,9 +63,34 @@ function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o
 function dld() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 alias minecraft="ssh -i ~/.ssh/minecraft.pem ec2-user@34.201.76.17"
 alias openwork='atom -p $(git ls-files -m)'
+alias bs='browser-sync start . -s --files "*.html, *.css"'
+alias "git pushit"="git push -u origin $(git current-branch)"
 
 
-### THE MOST IMPORTANT PART ###
-#Search History (autocomplete style~)
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
+
+### IDK?? ###
+
+#disable ctrl-s/suspension
+# stty stop undef
+# setopt NO_FLOW_CONTROL
+# setopt magicequalsubst
+# setopt interactivecomments
+# bindkey '^R' history-incremental-search-backward
+# autoload -U zrecompile
+
+#ignore obnoxious stuff
+# alias git='nocorrect git'
+# alias rake='noglob rake'
+# Add the following to your ~/.bashrc or ~/.zshrc
+
+
+# Allow for local environment configuration in ~/.zsh/*.zsh
+# if [ -d ~/.zsh ]; then
+#   for config_file (~/.zsh/*.zsh); do
+#     source $config_file
+#   done
+# fi
+
+# RVM is a silly thing. This fixes tmux not loading gemset
+# http://stackoverflow.com/a/6097090/3010499
+# cd .
