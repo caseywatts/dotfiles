@@ -64,7 +64,7 @@ function dld() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o
 alias minecraft="ssh -i ~/.ssh/minecraft.pem ec2-user@34.201.76.17"
 alias openwork='atom -p $(git ls-files -m)'
 alias bs='browser-sync start . -s --files "*.html, *.css"'
-alias "git pushit"="git push -u origin $(git current-branch)"
+# alias "git pushit"() {git push -u origin $(git current-branch)}
 
 
 
