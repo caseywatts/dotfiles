@@ -20,7 +20,7 @@ That code ^ but in English:
 - Install `zsh-syntax-highlighting`, see [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 - Terminal
   - make the background black and the text white
-  - make ctrl+tab work https://superuser.com/questions/26100/using-ctrl-tab-to-switch-between-tabs-in-mac-terminal-app
+  - make ctrl+tab work [see here](https://superuser.com/questions/26100/using-ctrl-tab-to-switch-between-tabs-in-mac-terminal-app)
   - check "Use Option as Meta key" under "Terminal -> Preferences -> Profiles -> Keyboard" to make move-by-word and delete-by-word work (alt+left, alt+right, alt+backspace)
 
 ## Maintaining it
