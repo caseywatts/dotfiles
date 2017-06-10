@@ -4,9 +4,10 @@ ZSH_THEME="robbyrussell" # the default theme
 plugins=(git bundler zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
-# To see what these plugins ^ add in for us, see here:
-# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
-# https://github.com/zsh-users/zsh-syntax-highlighting
+# Docs for the oh-my-zsh plugins:
+# git https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
+# bundler https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/bundler
+# zsh-syntax-highlighting https://github.com/zsh-users/zsh-syntax-highlighting
 
 
 ### THE MOST IMPORTANT PART ###
