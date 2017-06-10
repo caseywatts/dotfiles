@@ -15,8 +15,8 @@
 [push]
   default = simple
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [user]
-	email = casey.s.watts@gmail.com
+  email = casey.s.watts@gmail.com
 [core]
-	editor = atom --wait
+  editor = atom --wait
