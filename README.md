@@ -10,13 +10,11 @@ git clone https://github.com/caseywatts/dotfiles ~/.dotfiles
 ln -s ~/.dotfiles/.* ~/; rm ~/.git
 ```
 
-That code ^ but in English:
-- clone this gist to `~/.dotfiles`
-- symlink the dotfiles to the home directory where they'll be used
-  - (all files that start with `.` except the `.git` directory)
+This symlinks the dotfiles to the home directory where they'll be used.
   - (do you know a cleaner way to do this than the `rm`? lol I'd love to know!)
 
 ### Other Setup
+- Install zsh/oh-my-zsh [see here](https://github.com/robbyrussell/oh-my-zsh#basic-installation) (disclaimer: I haven't done this lately. Am I missing a step?)
 - Install `zsh-syntax-highlighting`, see [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 - Terminal
   - make the background black and the text white
