@@ -1,12 +1,13 @@
 ### ZSH ###
-# uses the plugin zsh-syntax-highlighting
+
+# zsh-syntax-highlighting instructions
 # see https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
 # basically - run this once:
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-plugins=(git bundler vi-mode zsh-syntax-highlighting)
+plugins=(git bundler zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 
@@ -61,12 +62,8 @@ function dl() {youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s
 function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 function dld() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 alias openwork='atom $(git ls-files -m)'
-alias pushit="git push -u origin $(git symbolic-ref --short -q HEAD)"
+alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)'
 alias bs='browser-sync start . -s --files "*.html, *.css"'
-
-
-# servers
-alias minecraft="ssh -i ~/.ssh/minecraft.pem ec2-user@34.201.76.17"
 
 
 
