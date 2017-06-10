@@ -1,9 +1,12 @@
 ### ZSH ###
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell" # the default theme
 plugins=(git bundler zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
+# To see what these plugins ^ add in for us, see here:
+# https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins
+# https://github.com/zsh-users/zsh-syntax-highlighting
 
 
 ### THE MOST IMPORTANT PART ###
@@ -16,18 +19,6 @@ bindkey "^[[B" history-search-forward
 
 ### JUST PATHY THINGS ###
 
-# what things use this? probably git at least
-export EDITOR=atom
-
-# something about the C language? I wish I took better notes lol
-export LC_ALL=en_US.UTF-8
-
-# tell nokogiri to use sysem libraries instead of compiling packaged libs
-export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
-
-# idk? from zsh?
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/caseywatts/.rvm/bin:/Users/caseywatts/bin"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -37,15 +28,21 @@ eval "$(rbenv init -)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# HUE
-export LDFLAGS=-L/usr/local/opt/openssl/lib && export CPPFLAGS=-I/usr/local/opt/openssl/include
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+
 # openssl
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+# tell nokogiri to use sysem libraries instead of compiling packaged libs
+export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
+
+# Philips HUE
+# note to self: try removing this next time you use this, in case the #openssl above helps enough
+export LDFLAGS=-L/usr/local/opt/openssl/lib && export CPPFLAGS=-I/usr/local/opt/openssl/include
+
 
 
 
@@ -54,16 +51,27 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 # aliases
 function dl() {youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
-function dld() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
-alias openwork='atom $(git ls-files -m)'
-alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)'
-alias bs='browser-sync start . -s --files "*.html, *.css"'
+alias openwork='atom $(git ls-files -mo)' # open all modified or untracked files
+alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)' # oh yeah saltnpepa
+alias bs='browser-sync start . -s --files "*.html, *.css"' # way better than livereload!
 
 
 
 
 ### Old things I probably don't need ###
 ### but I'm not 100% sure yet so they're sticking around ###
+
+
+# what things use this? probably git at least?
+# export EDITOR=atom
+
+# something about the C language? I wish I took better notes lol
+# export LC_ALL=en_US.UTF-8
+
+# idk? from latex?
+# export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/texbin:/Users/caseywatts/.rvm/bin:/Users/caseywatts/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
 
 # continuity ones?
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
