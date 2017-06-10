@@ -3,7 +3,7 @@ short url: [caseywatts.com/dotfiles](caseywatts.com/dotfiles)
 To set this up quickly for himself, Casey would:
 
 ```
-git clone https://gist.github.com/caseywatts/9b2a0552bb45c6769a1d6a2087b9bf5c ~/.dotfiles
+git clone https://github.com/caseywatts/dotfiles ~/.dotfiles
 ln -s ~/.dotfiles/.* ~/; rm ~/.git 
 ```
 
