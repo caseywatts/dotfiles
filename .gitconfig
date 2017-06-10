@@ -13,7 +13,7 @@
   diff = true
   ui = true
 [push]
-  default = simple
+  default = current
 [credential]
   helper = osxkeychain
 [user]
