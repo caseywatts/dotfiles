@@ -8,12 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 plugins=(git bundler vi-mode zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
-# .zshrc
 
-# # use 'pure' prompt #
-# autoload -U promptinit; promptinit
-# prompt pure
-#
 
 
 ### THE MOST IMPORTANT PART ###
@@ -26,7 +21,7 @@ bindkey "^[[B" history-search-forward
 
 ### JUST PATHY THINGS ###
 
-# what things use this?
+# what things use this? probably git at least
 export EDITOR=atom
 
 # something about the C language? I wish I took better notes lol
@@ -57,11 +52,6 @@ export NVM_DIR="$HOME/.nvm"
 # openssl
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
-# continuity ones?
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-# PATH=$PATH:$HOME/bin # Make personal scripts available
-# PATH=$PATH:$HOME/.bin # Make dotfiles scripts available
-
 
 
 ### MY ALIASES ###
@@ -70,14 +60,25 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 function dl() {youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 function dld() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
-alias minecraft="ssh -i ~/.ssh/minecraft.pem ec2-user@34.201.76.17"
-alias openwork='atom -p $(git ls-files -m)'
+alias openwork='atom $(git ls-files -m)'
+alias pushit="git push -u origin $(git symbolic-ref --short -q HEAD)"
 alias bs='browser-sync start . -s --files "*.html, *.css"'
-# alias "git pushit"() {git push -u origin $(git current-branch)}
+
+
+# servers
+alias minecraft="ssh -i ~/.ssh/minecraft.pem ec2-user@34.201.76.17"
 
 
 
-### IDK?? ###
+
+### Old things I probably don't need ###
+### but I'm not 100% sure yet so they're sticking around ###
+
+# continuity ones?
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/bin # Make personal scripts available
+# PATH=$PATH:$HOME/.bin # Make dotfiles scripts available
+
 
 #disable ctrl-s/suspension
 # stty stop undef
