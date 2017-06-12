@@ -64,6 +64,7 @@ alias dash="cd ~/Code/dashboard"
 alias ahc="cd ~/Code/addons.heroku.com"
 alias cw="cd ~/Code/caseywatts.github.io"
 alias ppu="cd ~/Code/partner-portal-ui"
+alias gpf="git push --force-with-lease"
 
 
 # see: caseywatts.com/darken
