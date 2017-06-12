@@ -63,6 +63,7 @@ alias el="cd ~/Code/elements"
 alias dash="cd ~/Code/dashboard"
 alias ahc="cd ~/Code/addons.heroku.com"
 alias cw="cd ~/Code/caseywatts.github.io"
+alias ppu="cd ~/Code/partner-portal-ui"
 
 
 # see: caseywatts.com/darken
