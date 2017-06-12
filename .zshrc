@@ -33,6 +33,9 @@ export PATH=$PATH:$GOPATH/bin
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+# yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+
 
 # openssl
 export PATH="/usr/local/opt/openssl/bin:$PATH"
@@ -55,6 +58,12 @@ function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o
 alias openwork='atom $(git ls-files -mo)' # open all modified or untracked files
 alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)' # oh yeah saltnpepa
 alias bs='browser-sync start . -s --files "*.html, *.css"' # way better than livereload!
+
+alias el="cd ~/Code/elements"
+alias dash="cd ~/Code/dashboard"
+alias ahc="cd ~/Code/addons.heroku.com"
+alias cw="cd ~/Code/caseywatts.github.io"
+
 
 # see: caseywatts.com/darken
 # accepts 2 arguments
