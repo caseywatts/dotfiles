@@ -77,6 +77,7 @@ alias gpf="git push --force-with-lease"
 function darken() {
   DENSITY=${2:-80} # either the 2nd argument, or the default will be 80
   convert -density 300x300 $1.pdf -threshold $DENSITY% $1_$DENSITY.pdf
+  echo "saved as $1_$DENSITY.pdf"
 }
 
 
