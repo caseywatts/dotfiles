@@ -68,17 +68,15 @@ alias gpf="git push --force-with-lease"
 
 
 # see: caseywatts.com/darken
-# accepts 2 arguments
+# accepts 1 argument
 #   - filename without extension (no .pdf)
-#   - threshold value (default is 80 if none given)
 # examples:
-#  - darken SheetMusic_Papi 75
 #  - darken SheetMusic_Papi
 function darken() {
-  DENSITY=${2:-80} # either the 2nd argument, or the default will be 80
-  convert -density 300x300 $1.pdf -threshold $DENSITY% $1_$DENSITY.pdf
-  echo "saved as $1_$DENSITY.pdf"
+  convert -density 300x300 $1.pdf -monochrome -quality 100 $1_bw.pdf
+  echo "saved as $1_bw.pdf"
 }
+
 
 
 
