@@ -84,8 +84,8 @@ function darken() {
 ### but I'm not 100% sure yet so they're sticking around ###
 
 
-# what things use this? probably git at least?
-# export EDITOR=atom
+# npm edit uses this, at least
+export EDITOR=atom
 
 # something about the C language? I wish I took better notes lol
 # export LC_ALL=en_US.UTF-8
