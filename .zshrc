@@ -77,7 +77,19 @@ function darken() {
   echo "saved as $1_bw.pdf"
 }
 
-
+# grabid
+# grab id from the heroku api endpoint
+# and then copy it into clipboard
+#
+# grabid /addon-services/deployhooks
+# grabid /apps/powerful-hamlet-24622
+function grabid() {
+  thingId=$(heroku api get $1 | jq '.id' -r)
+  echo "endpoint: $1"
+  echo "id: $thingId"
+  echo 'id copied to clipboard'
+  printf $thingId | pbcopy
+}
 
 
 ### Old things I probably don't need ###
