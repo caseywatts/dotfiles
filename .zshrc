@@ -65,6 +65,7 @@ alias ahc="cd ~/Code/addons.heroku.com"
 alias cw="cd ~/Code/caseywatts.github.io"
 alias ppu="cd ~/Code/partner-portal-ui"
 alias gpf="git push --force-with-lease"
+alias smush="git commit --amend --no-edit"
 
 
 # see: caseywatts.com/darken
