@@ -90,7 +90,7 @@ function grabid() {
   echo "endpoint: $1"
   echo "id: $thingId"
   echo 'id copied to clipboard'
-  printf $thingId | pbcopy
+  printf $thingId | pbcopy # printf so no new line
 }
 
 
