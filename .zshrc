@@ -139,3 +139,6 @@ export EDITOR=atom
 # RVM is a silly thing. This fixes tmux not loading gemset
 # http://stackoverflow.com/a/6097090/3010499
 # cd .
+
+# Heroku Autocomplete
+fpath=( /Users/cwatts/.local/share/heroku/client/node_modules/cli-engine/autocomplete/zsh $fpath ); autoload -Uz compinit; compinit;
