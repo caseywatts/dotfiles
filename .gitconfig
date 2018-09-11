@@ -17,3 +17,5 @@
   color = always
 [diff]
   colorMoved = default
+[branch]
+  sort = -authordate
