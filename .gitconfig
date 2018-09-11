@@ -13,6 +13,7 @@
 [core]
   editor = atom --wait
   excludesfile = ~/.gitignore
+  autocrlf = input
   color = always
 [diff]
   colorMoved = default
