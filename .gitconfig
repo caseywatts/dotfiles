@@ -3,6 +3,7 @@
   nudge = push --force-with-lease
   list-branches = branch --sort=committerdate
   delete-merged-branches = !git delete-merged-branches branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin
+  alias = config --get-regexp ^alias\\.
 [push]
   default = simple
 [credential]
