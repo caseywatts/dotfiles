@@ -145,3 +145,7 @@ fpath=( /Users/cwatts/.local/share/heroku/client/node_modules/cli-engine/autocom
 
 # Python user path to my path
 export PATH=$PATH:/Users/cwatts/Library/Python/2.7
+
+# set up asdf for elixir/erlang
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
