@@ -142,3 +142,6 @@ export EDITOR=atom
 
 # Heroku Autocomplete
 fpath=( /Users/cwatts/.local/share/heroku/client/node_modules/cli-engine/autocomplete/zsh $fpath ); autoload -Uz compinit; compinit;
+
+# Python user path to my path
+export PATH=$PATH:/Users/cwatts/Library/Python/2.7
