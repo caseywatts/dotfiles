@@ -6,6 +6,7 @@ short url: [caseywatts.com/dotfiles](caseywatts.com/dotfiles)
 To set this up quickly for himself, Casey would:
 
 ```
+sudo apt install zsh
 git clone https://github.com/caseywatts/dotfiles ~/.dotfiles
 ln -s ~/.dotfiles/.* ~/; rm ~/.git
 ```
