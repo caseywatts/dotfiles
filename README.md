@@ -17,7 +17,7 @@ This symlinks the dotfiles to the home directory where they'll be used.
 ### Other Setup
 - Install zsh/oh-my-zsh [see here](https://github.com/robbyrussell/oh-my-zsh#basic-installation) (disclaimer: I haven't done this lately. Am I missing a step?)
 - Install `zsh-syntax-highlighting`, see [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
-- Terminal
+- OSX Terminal
   - make the background black and the text white; font size to 13; 'consolas' font
   - make ctrl+tab work [see here](https://superuser.com/questions/26100/using-ctrl-tab-to-switch-between-tabs-in-mac-terminal-app)
   - check "Use Option as Meta key" under "Terminal -> Preferences -> Profiles -> Keyboard" to make move-by-word and delete-by-word work (alt+left, alt+right, alt+backspace)
