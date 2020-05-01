@@ -6,11 +6,9 @@
   alias = config --get-regexp ^alias\\.
 [push]
   default = simple
-[credential]
-  helper = osxkeychain
 [user]
-  name = Casey Watts
-  email = casey.s.watts@gmail.com
+	name = Casey Watts
+	email = casey.s.watts@gmail.com
 [core]
   editor = atom --wait
   excludesfile = ~/.gitignore
@@ -20,3 +18,5 @@
   colorMoved = default
 [branch]
   sort = -authordate
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe

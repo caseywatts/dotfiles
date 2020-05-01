@@ -1,7 +1,7 @@
 ### ZSH ###
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell" # the default theme
-plugins=(git bundler zsh-syntax-highlighting atom)
+plugins=(git bundler zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Docs for the oh-my-zsh plugins:
@@ -79,6 +79,11 @@ function darken() {
   echo "saved as $1_bw.pdf"
 }
 
+function resize() {
+  convert -define jpeg:extent=3500kb $1.cr2 $1.jpeg
+  echo "saved as a ~3.5mb jpeg"
+}
+
 # grabid
 # grab id from the heroku api endpoint
 # and then copy it into clipboard
@@ -99,7 +104,7 @@ function grabid() {
 
 
 # npm edit uses this, at least
-export EDITOR=atom
+# export EDITOR=atom
 
 # something about the C language? I wish I took better notes lol
 # export LC_ALL=en_US.UTF-8
@@ -146,6 +151,13 @@ fpath=( /Users/cwatts/.local/share/heroku/client/node_modules/cli-engine/autocom
 # Python user path to my path
 export PATH=$PATH:/Users/cwatts/Library/Python/2.7
 
-# set up asdf for elixir/erlang
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# Use custom global node_modules path: https://stackoverflow.com/a/55274930
+export PATH=~/.npm-global/bin:$PATH
+
+# add ~/bin to path for butler
+export PATH="$PATH:$HOME/bin"
+
+
+alias atom="/mnt/c/Windows/System32/cmd.exe /c 'atom'"
+cd /mnt/c/code
+‘export PATH=/home/caseywatts/.rbenv/bin:/usr/local/opt/openssl/bin:/home/caseywatts/.yarn/bin:/home/caseywatts/.rbenv/shims:/home/caseywatts/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Casey Watts/AppData/Local/Microsoft/WindowsApps:/home/caseywatts/go/bin:/Users/cwatts/Library/Python/2.7”’
