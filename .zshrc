@@ -1,7 +1,7 @@
 ### ZSH ###
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell" # the default theme
-plugins=(git bundler zsh-syntax-highlighting)
+plugins=(git bundler)
 source $ZSH/oh-my-zsh.sh
 
 # Docs for the oh-my-zsh plugins:
