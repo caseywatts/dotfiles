@@ -1,7 +1,7 @@
 ### ZSH ###
 export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell" # the default theme
-plugins=(git bundler zsh-syntax-highlighting atom)
+plugins=(git bundler zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Docs for the oh-my-zsh plugins:
@@ -55,7 +55,7 @@ export LDFLAGS=-L/usr/local/opt/openssl/lib && export CPPFLAGS=-I/usr/local/opt/
 # aliases
 function dl() {youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
 function ddl() {cd ~/Downloads && youtube-dl --no-mtime -x --audio-format mp3 -o "%(title)s.%(ext)s" "$*"}
-alias openwork='atom $(git ls-files -mo)' # open all modified or untracked files
+# alias openwork='atom $(git ls-files -mo)' # open all modified or untracked files
 alias pushit='git push -u origin $(git symbolic-ref --short -q HEAD)' # oh yeah saltnpepa
 alias bs='browser-sync start . -s --files "*.html, *.css"' # way better than livereload!
 
@@ -99,7 +99,7 @@ function grabid() {
 
 
 # npm edit uses this, at least
-export EDITOR=atom
+# export EDITOR=atom
 
 # something about the C language? I wish I took better notes lol
 # export LC_ALL=en_US.UTF-8
@@ -147,5 +147,9 @@ fpath=( /Users/cwatts/.local/share/heroku/client/node_modules/cli-engine/autocom
 export PATH=$PATH:/Users/cwatts/Library/Python/2.7
 
 # set up asdf for elixir/erlang
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
+
+# for x server for electron on WSL2
+export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
+
