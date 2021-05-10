@@ -9,8 +9,7 @@ tap "homebrew/versions"
 brew "mas"
 mas "Xcode", id: 497799835
 
-## Base
-# brew "git", link: false
+## Base CLI
 brew "curl"
 brew "gist"
 brew "git"
@@ -20,19 +19,18 @@ brew "wget"
 brew "youtube-dl"
 brew "zsh"
 
-## Coding
+## Coding CLI
+brew "python"
+brew "python3"
 brew "awscli"
-brew "colordiff"
 brew "coreutils"
 brew "go"
 brew "htop"
 brew "imagemagick"
 brew "jq"
-brew "n"
 brew "node"
 brew "openssh"
 brew "openssl"
-# brew "openssl@1.1"
 brew "rbenv"
 brew "ruby-build"
 brew "rust"
@@ -41,6 +39,10 @@ brew "vim"
 brew "yarn"
 
 ## Apps - General, Communication
+cask 'bitwarden'
+cask 'caffeine'
+cask 'charles'
+cask 'kindle'
 cask "adobe-acrobat-reader"
 cask "discord"
 cask "firefox"
@@ -55,7 +57,6 @@ cask "vivaldi"
 cask "vlc"
 cask "workflowy"
 cask "zoomus"
-mas "Keynote", id: 409183694
 
 ## Apps - Writing
 # sumatra pdf - windows only
@@ -86,6 +87,7 @@ cask "softube-central"
 cask "waves-central"
 mas "Affinity Designer", id: 824171161
 mas "GarageBand", id: 682658836
+mas "Keynote", id: 409183694
 
 ## Trying These Out
 brew "exif"
@@ -95,6 +97,5 @@ brew "libexif"
 brew "libjpeg"
 brew "jpegoptim"
 brew "shellcheck"
-
-
-
+brew "colordiff"
+cask 'bartender'
