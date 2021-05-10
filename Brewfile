@@ -1,3 +1,16 @@
+## Description
+# CLI tools managed by `brew`
+# Most GUI apps managed by `cask`
+# Other GUI apps managed by `mas` (OSX App Store)
+# Fonts managed by FontBase (installed via Cask)
+# OSX Settings managed in `osx-settings-setup.sh`
+
+## Inspired by
+# This most thorough Brewfile by joelparkerhenderson: https://github.com/joelparkerhenderson/brewfile/blob/6c645a49b73bb2f78adeb72e057e554295b26c0b/Brewfile
+# Great OSX Settings by jbelke: https://gist.github.com/jbelke/4496b2b1d7900d7971802332234bd781
+# I learned about `mas` from filler: https://github.com/filler/dotfiles/blob/master/Brewfile
+# More ideas from bengm: https://github.com/bengm/mac-config/blob/master/Brewfile
+
 ## Setup
 tap "homebrew/bundle"
 tap "homebrew/cask-drivers"
@@ -91,6 +104,18 @@ cask "waves-central"
 mas "Affinity Designer", id: 824171161
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
+
+## Nicer plugins for QuickLook.
+cask "qlcolorcode"
+cask "qlstephen"
+cask "qlmarkdown"
+cask "quicklook-json"
+cask "webpquicklook"
+cask "qlimagesize"
+cask "qlprettypatch"
+cask "quicklook-csv"
+cask "betterzipql"
+cask "suspicious-package"
 
 ## Trying These Out
 brew "exif"
