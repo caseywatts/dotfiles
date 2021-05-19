@@ -16,11 +16,12 @@ tap "homebrew/bundle"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "homebrew/dupes"
+# tap "homebrew/dupes"
 tap "homebrew/services"
-tap "homebrew/versions"
-brew "mas"
-mas "Xcode", id: 497799835
+tap "yulrizka/tap"
+# tap "homebrew/versions"
+# brew "mas"
+# mas "Xcode", id: 497799835
 
 ## Base CLI
 brew "curl"
@@ -28,10 +29,11 @@ brew "gist"
 brew "git"
 brew "graphviz"
 brew "grep"
-brew "pandoc"
+# brew "pandoc"
 brew "wget"
 brew "youtube-dl"
 brew "zsh"
+brew "pushtotalk" # have to symlink this to Applications, see https://github.com/yulrizka/osx-push-to-talk
 
 ## Coding CLI
 brew "python"
@@ -57,11 +59,10 @@ cask 'bitwarden'
 cask 'caffeine'
 cask 'charles'
 cask 'kindle'
-cask "adobe-acrobat-reader"
 cask "discord"
 cask "firefox"
 cask "google-chrome"
-cask "iexplorer"
+# cask "iexplorer"
 cask "libreoffice"
 cask "signal"
 cask "skype"
@@ -70,7 +71,7 @@ cask "visual-studio-code"
 cask "vivaldi"
 cask "vlc"
 cask "workflowy"
-cask "zoomus"
+cask "zoom"
 
 ## Apps - Writing
 # sumatra pdf - windows only
@@ -101,11 +102,12 @@ cask "obs"
 cask "softube-central"
 cask "unity"
 cask "waves-central"
-mas "Affinity Designer", id: 824171161
-mas "GarageBand", id: 682658836
-mas "Keynote", id: 409183694
+# mas "Affinity Designer", id: 824171161
+# mas "GarageBand", id: 682658836
+# mas "Keynote", id: 409183694
 
 ## Nicer plugins for QuickLook.
+# from https://github.com/sindresorhus/quick-look-plugins
 cask "qlcolorcode"
 cask "qlstephen"
 cask "qlmarkdown"
@@ -114,7 +116,7 @@ cask "webpquicklook"
 cask "qlimagesize"
 cask "qlprettypatch"
 cask "quicklook-csv"
-cask "betterzipql"
+# cask "betterzipql"
 cask "suspicious-package"
 
 ## Trying These Out
@@ -124,6 +126,6 @@ brew "exiftool"
 brew "libexif"
 brew "libjpeg"
 brew "jpegoptim"
-brew "shellcheck"
+# brew "shellcheck"
 brew "colordiff"
 cask 'bartender'

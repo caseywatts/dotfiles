@@ -53,7 +53,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Unhide "~/Library" folder.
-chflags nohidden "~/Library"
+chflags nohidden ~/Library
 
 # Add iOS Simulator app to normal "/Applications" directory.
 ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/iOS Simulator.app"
