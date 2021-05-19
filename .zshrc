@@ -20,6 +20,9 @@ bindkey "^[[B" history-search-forward
 
 ### JUST PATHY THINGS ###
 
+# general local/bin (for brew)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
