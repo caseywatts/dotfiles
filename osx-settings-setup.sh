@@ -66,3 +66,6 @@ defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "cpUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+# Disable the bottom-right hot corner (it's set to quick note by default which I don't use lol)
+defaults write com.apple.dock wvous-br-corner -int 0
