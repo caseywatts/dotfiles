@@ -25,6 +25,10 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.google.Chrome DisablePrintPreview -bool true
 defaults write com.google.Chrome PMPrintingExpandedStateForPrint2 -bool true
 
+# Disable the all too sensitive backswipe on trackpads
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+defaults write com.google.Chrome.canary AppleEnableSwipeNavigateWithScrolls -bool false
+
 # Copy email addresses, not names, from Mail.
 # defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
@@ -45,9 +49,9 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Invert scrolling direction.
 # defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
-# Open Finder at "~/" directory.
+# Open Finder at "~/Downloads" directory.
 defaults write com.apple.finder NewWindowTarget -string "PfLo" # Location
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads"
 
 # Don't create temporary files to network mounted drives.
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -69,3 +73,6 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 
 # Disable the bottom-right hot corner (it's set to quick note by default which I don't use lol)
 defaults write com.apple.dock wvous-br-corner -int 0
+
+# Don't let Preview open all previously opened files every time
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES

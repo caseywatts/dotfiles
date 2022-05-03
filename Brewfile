@@ -34,6 +34,7 @@ brew "wget"
 brew "youtube-dl"
 brew "zsh"
 brew "pushtotalk" # have to symlink this to Applications, see https://github.com/yulrizka/osx-push-to-talk
+brew "ffmpeg"
 
 ## Coding CLI
 brew "python"

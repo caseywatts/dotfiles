@@ -12,7 +12,7 @@
   name = Casey Watts
   email = casey.s.watts@gmail.com
 [core]
-  editor = atom --wait
+  editor = code
   excludesfile = ~/.gitignore
   autocrlf = input
   color = always

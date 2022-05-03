@@ -26,7 +26,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
 eval "$(rbenv init -)"
+
 
 # Go
 export GOPATH=$HOME/go
@@ -41,14 +44,14 @@ export PATH="$HOME/.yarn/bin:$PATH"
 
 
 # openssl
-export PATH="/usr/local/opt/openssl/bin:$PATH"
+# export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # tell nokogiri to use sysem libraries instead of compiling packaged libs
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
 
 # Philips HUE
 # note to self: try removing this next time you use this, in case the #openssl above helps enough
-export LDFLAGS=-L/usr/local/opt/openssl/lib && export CPPFLAGS=-I/usr/local/opt/openssl/include
+# export LDFLAGS=-L/usr/local/opt/openssl/lib && export CPPFLAGS=-I/usr/local/opt/openssl/include
 
 
 
@@ -78,8 +81,48 @@ alias quoteit="pbpaste | sed 's/^/> /' | pbcopy"
 # examples:
 #  - darken SheetMusic_Papi
 function darken() {
-  convert -density 300x300 $1.pdf -monochrome -quality 100 $1_bw.pdf
-  echo "saved as $1_bw.pdf"
+  originalFileName=${1%.*}
+  echo "Darkening $originalFileName.pdf"
+  convert -density 300x300 $originalFileName.pdf -monochrome -quality 100 $originalFileName-bw.pdf
+  echo "Saved as $originalFileName (darkened).pdf"
+}
+
+function darkenseveral() {
+  originalFileName=${1%.*}
+  echo "Darkening $originalFileName.pdf"
+  thresholds=(90% 95% 98% 99%)
+  for threshold in "${thresholds[@]}"
+  do
+    # convert -density 300x300 $originalFileName.pdf -monochrome -quality 100 $originalFileName-bw.pdf
+    convert $originalFileName.pdf -density 300x300 +dither -channel RGB -threshold $threshold "$originalFileName ($threshold).pdf"
+    # convert $originalFileName.pdf -channel RGB -density 300x300 -sigmoidal-contrast 2x$threshold "$originalFileName ($threshold).pdf"
+    # convert $originalFileName.pdf -channel RGB -auto-threshold OTSU "$originalFileName (bw).pdf"
+    echo "Saved as $originalFileName ($threshold).pdf"
+    # echo "Saved as '$originalFileName (bw).pdf'"
+  done
+}
+
+# looping? use something like
+# for file in *.jpg; convert -colorspace Gray $file $file; end;
+
+# function docommandtoallfiles() {
+#   fileNames=(file*)
+#   for fileName in fileNames
+#   do
+#       echo "$fileName"
+#   done
+# }
+
+
+function dothespeeds() {
+  originalFileName=${1%.*}
+  speeds=( "0.5" "0.6" "0.7" "0.8" "0.9" "1.0" )
+  echo "File: $originalFileName"
+  for speed in "${speeds[@]}"
+  do
+    echo "Speed: $speed"
+    ffmpeg -i $originalFileName.mp3 -filter:a "atempo=${speed}" -vn "speeds/$originalFileName $speed.mp3"
+  done
 }
 
 # grabid
@@ -156,3 +199,10 @@ export PATH=$PATH:/Users/cwatts/Library/Python/2.7
 # for x server for electron on WSL2
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
