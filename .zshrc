@@ -72,7 +72,7 @@ alias cw="cd ~/Code/caseywatts.github.io"
 alias ppu="cd ~/Code/partner-portal-ui"
 alias gpf="git push --force-with-lease"
 alias smush="git commit --amend --no-edit"
-alias cleanup="git checkout --quiet master && git branch --merged | grep -v master | xargs -n 1 git branch -d && git checkout --quiet @{-1}"
+alias cleanup="git checkout --quiet main && git branch --merged | grep -v main | xargs -n 1 git branch -d && git checkout --quiet @{-1}"
 alias quoteit="pbpaste | sed 's/^/> /' | pbcopy"
 
 # see: caseywatts.com/darken
