@@ -119,6 +119,7 @@ function darkenseveral() {
 #   - filename with extension (mp4)
 # examples:
 #  - loopit bouncing_ball.mp4
+# inspiration: https://video.stackexchange.com/questions/12905/repeat-loop-input-video-with-ffmpeg
 function loopit() {
   originalFileName=${1%.*}
   echo "Looping"
