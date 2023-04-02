@@ -115,6 +115,10 @@ function darkenseveral() {
 #   done
 # }
 
+# accepts 1 argument
+#   - filename with extension (mp4)
+# examples:
+#  - loopit bouncing_ball.mp4
 function loopit() {
   originalFileName=${1%.*}
   echo "Looping"
