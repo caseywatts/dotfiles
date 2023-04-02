@@ -115,6 +115,13 @@ function darkenseveral() {
 #   done
 # }
 
+function loopit() {
+  originalFileName=${1%.*}
+  echo "Looping"
+  ffmpeg -stream_loop 3 -i $originalFileName.mp4 -c copy "$originalFileName (looping).mp4"
+  echo "From: $originalFileName.mp4"
+  echo "To: $originalFileName (looping).mp4"
+}
 
 function dothespeeds() {
   originalFileName=${1%.*}
