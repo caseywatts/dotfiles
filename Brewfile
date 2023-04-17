@@ -49,6 +49,7 @@ brew "node"
 brew "openssh"
 brew "openssl"
 brew "rbenv"
+brew "responsively" ## many-resolution browser previewer
 brew "ruby-build"
 brew "rust"
 brew "sqlite"
