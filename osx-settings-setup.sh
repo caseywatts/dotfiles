@@ -14,6 +14,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 # Show extensions in Finder.
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# Show dot files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
 # Show path in Finder.
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
