@@ -22,7 +22,7 @@ module.exports = {
     {
       // Open any link clicked in Mail & Outlook in Google Chrome
       match: ({ opener, keys }) => {
-        return ["Slack"].includes(opener.name) && keys.option;
+        return ["Slack"].includes(opener.name) && finicky.getKeys().option;
       },
       browser: "Google Chrome",
     },
